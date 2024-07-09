@@ -1,0 +1,50 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+     <style>
+        /* Adjust the width of form fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            max-width: 250px; /* Set maximum width as needed */
+        }
+
+        button[type="submit"] {
+            max-width: 250px; /* Set maximum width as needed */
+        }
+
+        .card {
+          max-width: 400px; /* Set maximum width of the card */
+          margin: auto; /* Center the card horizontally */
+    </style>
+</head>
+<body>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Login</h5>
+          <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</body>
+</html>
